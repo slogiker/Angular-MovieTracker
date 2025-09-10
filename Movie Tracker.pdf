@@ -1,0 +1,53 @@
+Opis projekta
+
+Projekt Movie Tracker je aplikacija, ki uporabnikom omogoča, da vodijo osebni seznam filmov in serij. Vsak uporabnik lahko ustvari račun, doda filme, jih označi kot gledane ali še za ogled, ter doda ocene in komentarje. Namen aplikacije je preprost: pomagati uporabnikom spremljati, katere filme so že pogledali, katere še želijo pogledati, in imeti pregled nad lastnimi priporočili.
+
+Aplikacija bo razvijana z Angularjem za frontend in .NET Web API za backend. Podatki o uporabnikih in filmih bodo shranjeni v SQLite bazi (lahko tudi MSSQL).
+
+Uporabniške zgodbe (User Stories)
+
+Kot uporabnik se lahko registriram in prijavim, da imam svoj osebni seznam filmov.
+
+Kot uporabnik lahko dodam film ali serijo (naslov, opis, žanr, leto izida).
+
+Kot uporabnik lahko urejam podatke o filmu, če sem se zmotil.
+
+Kot uporabnik lahko izbrišem film iz svojega seznama.
+
+Kot uporabnik lahko označim film kot "gledano", da imam pregled nad ogledanimi filmi.
+
+Kot uporabnik lahko dodam oceno (1–5 zvezdic) in komentar k filmu.
+
+Kot uporabnik lahko iščem filme po naslovu.
+
+Kot uporabnik lahko filtriram filme (npr. samo “gledane” ali “še za pogledati”).
+
+Kot uporabnik lahko vidim seznam vseh svojih filmov.
+
+Tehnologije in orodja
+
+Frontend: Angular (TypeScript, SCSS)
+
+Backend: .NET Web API
+
+Baza podatkov: SQLite ali MSSQL
+
+Version control: GitHub repository
+
+Dodatna orodja: Node.js za Angular, Visual Studio Code
+
+Struktura projekta:
+
+movie-tracker-app/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── services/
+│   │   └── app.module.ts
+│   ├── assets/
+│   ├── environments/
+│   └── index.html
+├── angular.json
+├── package.json
+└── README.md
