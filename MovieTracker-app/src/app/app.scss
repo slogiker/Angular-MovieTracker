@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body, html {
+  background-color: #111;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f39c12;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+.auth-buttons .btn {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.login {
+  background: transparent;
+  border: 1px solid #f39c12;
+  color: #f39c12;
+}
+
+.login:hover {
+  background: #f39c12;
+  color: #111;
+}
+
+.register {
+  background: #f39c12;
+  color: #111;
+}
+
+.register:hover {
+  background: #d35400;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../assets/backgrounhd.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #cccccc;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.hero-btn {
+  background: #f39c12;
+  color: #111;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background: #d35400;
+}
+
+/* Movies Section */
+.movies {
+  padding: 50px 40px;
+  background: #181818;
+}
+
+.movies h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #f39c12;
+  text-align: center;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: #222;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+}
