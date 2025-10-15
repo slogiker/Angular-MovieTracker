@@ -1,0 +1,18 @@
+.movies {
+    background: #181818;
+}
+
+.movies h2 {
+    color: #f39c12;
+}
+
+.movie-card {
+    background: #222;
+    color: white;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
