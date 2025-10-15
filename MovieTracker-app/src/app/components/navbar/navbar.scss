@@ -1,9 +1,62 @@
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #f39c12;
+.navbar {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: background-color 0.3s ease-in-out;
+  padding: 1rem 2rem;
 }
 
-.nav-link:hover {
-  color: #f39c12;
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+
+  &.active::after,
+  &:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    height: 3px;
+    background-color: var(--primary-color);
+  }
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--text-color-secondary);
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  i {
+    color: var(--text-color-secondary);
+  }
+
+  input {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 10px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--text-color-secondary);
+    }
+  }
+}
+
+.profile-icon i {
+  color: var(--text-color);
+  cursor: pointer;
 }
