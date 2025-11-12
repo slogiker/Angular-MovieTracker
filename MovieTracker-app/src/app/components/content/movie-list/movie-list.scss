@@ -1,64 +1,21 @@
-.movie-list-section {
-  padding: 1rem 4rem;
-}
+.movie-list-section { padding: 1rem 0.5rem; }
 
-.section-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
+.section-title { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-color); }
 
 .movie-row {
-  display: flex;
-  overflow-x: auto; // Omogoča horizontalno drsenje
-  overflow-y: hidden;
-  gap: 15px;
-  padding-bottom: 15px; // Prostor za scrollbar
-
-  // Skrijemo scrollbar, a ohranimo funkcionalnost
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  display:flex; overflow-x:auto; overflow-y:hidden; gap:1rem; padding-bottom:12px; scroll-behavior:smooth;
 }
+.movie-row::-webkit-scrollbar { height:8px; }
+.movie-row::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 6px; }
 
 .movie-poster {
-  position: relative;
-  min-width: 250px; // Fiksna širina za vsak poster
-  height: 370px;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  position: relative; min-width: 220px; height: 340px; border-radius: 10px; overflow:hidden; cursor:pointer; transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms;
 }
+.movie-poster img { width:100%; height:100%; object-fit:cover; display:block; }
+.movie-poster:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
 
-.poster-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
+.poster-overlay { position:absolute; left:0; right:0; bottom:0; padding:1rem; background: linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.85) 100%); opacity:0; transform: translateY(8px); transition: opacity 240ms, transform 240ms; }
+.movie-poster:hover .poster-overlay { opacity:1; transform: translateY(0); }
 
-.movie-poster:hover .poster-overlay {
-  opacity: 1;
-}
-
-.movie-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
+.movie-title { font-size: 1.05rem; font-weight:700; color:var(--text-color); }
+.movie-meta { font-size:0.9rem; color:var(--text-muted); margin-top:4px; }

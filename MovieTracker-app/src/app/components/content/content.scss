@@ -1,0 +1,5 @@
+/* Content shell styles */
+.content { padding: 2rem 0; }
+.content .section { margin-bottom: 2.5rem; }
+.content .section .section-inner { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.content .section.fade-up { animation: fadeUp 420ms cubic-bezier(.2,.9,.2,1) both; }
