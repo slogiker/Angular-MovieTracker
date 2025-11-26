@@ -1,5 +1,5 @@
 <div class="d-flex">
   <ng-container *ngFor="let b of buttons">
-    <button [class]="'btn ' + b.color + ' me-2'" type="button" [disabled]="!b.isEnabled">{{ b.label }}</button>
+    <a [routerLink]="b.label.toLowerCase()" class="btn me-2" [ngClass]="b.color">{{ b.label }}</a>
   </ng-container>
 </div>

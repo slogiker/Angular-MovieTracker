@@ -20,7 +20,12 @@
 /* reset / base */
 html, body { height: 100%; }
 body {
+  /* Use the movie background image site-wide so footer and main pages show it */
   background-color: var(--background-dark);
+  background-image: url('/assets/backgrounhd.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: var(--text-color);
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
@@ -28,6 +33,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.45;
   -webkit-font-feature-settings: "liga" 1;
+}
+
+/* Make the app a full-height column so footer can stick to bottom */
+app-root, body > app-root, .app-root-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main area should grow and provide a soft backdrop */
+.app-main {
+  flex: 1 1 auto;
+  padding-top: 5rem; /* give space for fixed navbar */
+  padding-bottom: 2rem;
+  backdrop-filter: none;
 }
 
 /* Container */
@@ -180,11 +200,13 @@ a:hover { text-decoration: underline; }
   padding: 1rem 1.25rem;
   position: relative;
   z-index: 10;
-  background: linear-gradient(180deg, rgba(0,0,0,0.06), transparent);
+  /* Dark, semi-opaque navbar so it reads well over both light and dark pages */
+  background: linear-gradient(180deg, rgba(10,10,10,0.98), rgba(14,14,14,0.92));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
   backdrop-filter: blur(6px);
 }
 .navbar .nav-link {
-  color: var(--text-muted);
+  color: var(--text-color);
   padding: 0.5rem 0.4rem;
   transition: color var(--transition-fast), transform var(--transition-fast);
 }

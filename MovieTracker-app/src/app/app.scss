@@ -1,10 +1,10 @@
 /* General Reset + small improvements */
 * { box-sizing: border-box; }
 
-html, body { height: 100%; }
+html, body, app-root { height: 100%; }
 
 body {
-  background: var(--background-dark);
+  background: transparent;
   color: var(--text-color);
 }
 
@@ -14,10 +14,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  /* Solid dark navbar so it consistently reads well over light pages and doesn't flash white */
+  background: linear-gradient(180deg, rgba(10,10,10,0.98), rgba(14,14,14,0.95));
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
   backdrop-filter: blur(6px);
   transition: box-shadow 220ms ease, background 220ms ease;
 }
@@ -47,4 +49,7 @@ body {
 .movie-card img { border-radius: 8px; display: block; width: 100%; }
 
 /* Footer */
-.footer { padding: 2rem 1rem; background: transparent; border-top: 1px solid rgba(255,255,255,0.04); color: var(--text-muted); }
+.footer, .site-footer { padding: 2rem 1rem; background: transparent; border-top: 1px solid rgba(255,255,255,0.04); color: var(--text-muted); }
+
+/* Ensure main area grows to push footer to bottom */
+.app-main { flex: 1 1 auto; }

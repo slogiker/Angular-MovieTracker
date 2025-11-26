@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Button } from '../../../models/button.model';
 
 @Component({
   selector: 'app-navbar-buttons',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar-buttons.html',
   styleUrls: ['./navbar-buttons.scss']
 })

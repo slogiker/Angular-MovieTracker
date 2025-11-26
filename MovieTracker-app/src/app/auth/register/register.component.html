@@ -1,0 +1,26 @@
+<div class="auth-viewport">
+  <div class="auth-bg"></div>
+  <div class="auth-card">
+    <h2 class="auth-title">Create account</h2>
+    <p class="auth-sub">Join MovieTracker — save and track your favorites</p>
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" formControlName="username" placeholder="choose a username">
+        <div class="error" *ngIf="form.controls.username?.invalid && form.controls.username?.touched">Username is required</div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" placeholder="your email">
+        <div class="error" *ngIf="form.controls.email?.invalid && form.controls.email?.touched">Please enter a valid email</div>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="min 6 characters">
+        <div class="error" *ngIf="form.controls.password?.invalid && form.controls.password?.touched">Password must be at least 6 characters</div>
+      </div>
+      <button class="btn-primary" type="submit" [disabled]="form.invalid">Register</button>
+    </form>
+    <p class="auth-footer">Already have an account? <a routerLink="/login">Login</a></p>
+  </div>
+</div>
